@@ -1,3 +1,90 @@
-<h1>
-  {{title}}
-</h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+
+  <div id="page">
+
+<!--<div *ngIf="requestCount > 0">
+  Loading....
+</div>-->
+
+    <h1>Movie Search</h1>
+    <form id="searchForm" method="post">
+      <fieldset>
+        <input id="s" [(ngModel)]="searchKey" (keyup.enter)="DoSearch()" placeholder="Type here..." [ngModelOptions]="{standalone: true}" />
+
+        <input type="button" id="submitButton" (click)="DoSearch()" [disabled]="searchKey==''" />
+        <div id="searchInContainer">
+
+          <input type="radio" name="check" value="t" (change)="changeSearchType('t')" checked/>
+          <label for="searchSite">Search by Name</label>
+
+          <input type="radio" name="check" value="i" (change)="changeSearchType('i')" />
+          <label for="searchWeb">Search by IMDB ID</label>
+
+        </div>
+      </fieldset>
+    </form>
+    <div id="resultsDiv">
+      <!--{{response | json}}-->
+
+      <div *ngIf="response!=null">
+        <div *ngIf="response.Response=='True'; then content else notfoundcontent"></div>
+
+        <ng-template #content>
+          <table class=mainTable>
+            <tr>
+              <td rowspan=9>
+                <img [src]="response.Poster" alt="Not found avatar url" width="400">
+              </td>
+            </tr>
+            <tr>
+              <td style="width:100px;">Title</td>
+              <td>{{response.Title}}</td>
+            </tr>
+            <tr>
+              <td>Year</td>
+              <td>{{response.Year}}</td>
+            </tr>
+            <tr>
+              <td>Genre</td>
+              <td>{{response.Genre}}</td>
+            </tr>
+            <tr>
+              <td>Actors</td>
+              <td>{{response.Actors}}</td>
+            </tr>
+            <tr>
+              <td>Plot</td>
+              <td>{{response.Plot}}</td>
+            </tr>
+            <tr>
+              <td>IMDB Rating</td>
+              <td>{{response.imdbRating}}</td>
+            </tr>
+            <tr>
+              <td>IMDB ID</td>
+              <td>{{response.imdbID}}</td>
+            </tr>
+            <tr>
+              <td>Awards</td>
+              <td>
+                {{response.Awards}}
+              </td>
+            </tr>
+          </table>
+        </ng-template>
+        <ng-template #notfoundcontent>
+          Not found any movie..
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

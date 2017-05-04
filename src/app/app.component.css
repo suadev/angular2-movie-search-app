@@ -1,0 +1,122 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-size:13px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#page{
+	width:820px;
+	margin:0 auto 0;
+}
+
+h1{
+	font-family:Corbel,'Myriad Pro',Arial, Helvetica, sans-serif;
+    color:black;
+}
+
+#searchForm{
+	/* The search form. */
+	background-color:#4C5A65;
+	padding:50px 50px 30px;
+	margin:30px 0;
+	position:relative;
+
+	-moz-border-radius:16px;
+	-webkit-border-radius:16px;
+	border-radius:16px;
+}
+
+fieldset{
+	border:none;
+}
+
+#searchInputContainer{
+	/* This div contains the transparent search box */
+	width:420px;
+	height:36px;
+	background:url("img/searchBox.png") no-repeat;
+	float:left;
+	margin-right:12px;
+}
+
+#s{
+	/* The search text box. */
+	
+	border:none;
+	color:#888888;
+	/*background:url("img/searchBox.png") repeat;*/
+	border-radius: 5px;
+	float:left;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:15px;
+	height:36px;
+	line-height:36px;
+	margin-right:12px;
+	outline:medium none;
+	padding:0 0 0 35px;
+	text-shadow:1px 1px 0 white;
+	width:580px;
+}
+
+/* The submit button */
+
+#submitButton{
+	background:url('img/buttons.png') no-repeat;
+	width:83px;
+	height:36px;
+	text-indent:-9999px;
+	overflow:hidden;
+	text-transform:uppercase;
+	border:none;
+	cursor:pointer;
+}
+
+#submitButton:hover{
+	background-position:left bottom;
+}
+
+/* The Search tutorialzine.com / Search the Web radio buttons */
+
+#searchInContainer{
+	float:left;
+	margin-top:12px;
+	width:330px;
+}
+
+label{
+	color:#DDDDDD;
+	cursor:pointer;
+	font-size:11px;
+	position:relative;
+	right:-2px;
+	top:-2px;
+	margin-right:10px;
+	white-space:nowrap;
+	/*float:left;*/
+}
+
+input[type=radio]{
+	cursor:pointer;
+	/*float:left;*/
+}
+
+a:hover{
+	border-bottom:1px dashed transparent;
+}
+
+.clear{
+	clear:both;
+}
+
+.mainTable{
+    width: 100%;
+    height: 600px;
+}
+.mainTable td{
+    padding: 5px;
+    border: 1px solid;
+}
