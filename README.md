@@ -10,4 +10,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-<img width="1200" src="" alt="awesome" />
+<img width="1200" src="https://raw.githubusercontent.com/suadev/angular2-movie-search-app/master/src/app/img/screen_shot.PNG" alt="awesome" />
