@@ -10,7 +10,7 @@ export class MoviesService {
     public SearchMovie(searchKey: string, searchType: string) {
 
         
-        var url: string = 'http://www.omdbapi.com/?{type}=';
+        var url: string = 'https://www.omdbapi.com/?{type}=';
         url = url.replace('{type}', searchType);
         return this.http.get(url + searchKey)
             .map(result => result.json());
