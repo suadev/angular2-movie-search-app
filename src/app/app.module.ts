@@ -5,8 +5,9 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import {RouterModule} from  '@angular/router';
 import { MoviesService } from "app/movies.service";
+import { CommonConstants } from "app/CommonConstants";
 
-  
+
 @NgModule({
   declarations: [
     AppComponent  
@@ -19,9 +20,11 @@ import { MoviesService } from "app/movies.service";
           // {path: "**", component: PageNotFoundComponent}
       ])
   ],
-  providers: [MoviesService],
+  providers: [MoviesService, CommonConstants],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { 
-  //  requestCount : number = 0;
+
+
 }

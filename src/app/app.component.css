@@ -87,6 +87,10 @@ fieldset{
 	width:330px;
 }
 
+.loadingDiv{
+	text-align: center;
+}
+
 label{
 	color:#DDDDDD;
 	cursor:pointer;

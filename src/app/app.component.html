@@ -9,14 +9,11 @@
 
   <div id="page">
 
-<!--<div *ngIf="requestCount > 0">
-  Loading....
-</div>-->
-
     <h1>Movie Search</h1>
     <form id="searchForm" method="post">
       <fieldset>
-        <input id="s" [(ngModel)]="searchKey" (keyup.enter)="DoSearch()" placeholder="Type here..." [ngModelOptions]="{standalone: true}" />
+        <input id="s" [(ngModel)]="searchKey" (keyup.enter)="DoSearch()" placeholder="Type here..." [ngModelOptions]="{standalone: true}"
+        />
 
         <input type="button" id="submitButton" (click)="DoSearch()" [disabled]="searchKey==''" />
         <div id="searchInContainer">
@@ -30,9 +27,14 @@
         </div>
       </fieldset>
     </form>
-    <div id="resultsDiv">
-      <!--{{response | json}}-->
 
+    <div *ngIf="commons.requestCount > 0">
+      <div class="loadingDiv">
+        <img src="/src/app/img/ajax-loader.gif" alt="">
+      </div>
+    </div>
+
+    <div id="resultsDiv">
       <div *ngIf="response!=null">
         <div *ngIf="response.Response=='True'; then content else notfoundcontent"></div>
 
